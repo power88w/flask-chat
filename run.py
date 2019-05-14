@@ -27,7 +27,6 @@ def index():
 
     return render_template("index.html")
 
-gi
 
 @app.route('/chat/<username>', methods= ["GET", "POST"])
 def user(username):
@@ -41,7 +40,5 @@ def user(username):
     return render_template("chat.html", username = username, chat_messages = messages)
 
 
-app.run(host=os.getenv('IP', "0.0.0.0"), port=(os.getenv('PORT', "5000")), debug=False)
-
-
+app.run(host=os.getenv("IP", "0.0.0.0"), port=(os.getenv("PORT", "5000")), debug=False)
 
